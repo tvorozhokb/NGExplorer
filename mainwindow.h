@@ -41,27 +41,32 @@ private:
     QTreeView *treeView;
     QTableView *tableView;
     QLineEdit *pathEdit;
+    QFileSystemModel *model;
+
+    QTreeView         *drivesView;
+    QFileSystemModel  *drivesModel;
 
     QLineEdit *extensionEdit;
     QCheckBox *recursiveCheckBox;
     QPushButton *searchButton;
     QListWidget *resultsList;
-
     QCheckBox *includeNoExtensionCheckBox;
-
     QWidget *searchPanel;
     QPushButton *toggleSearchButton;
-
     QLineEdit *contentEdit;
-
     QLineEdit *nameEdit;
-
     QProgressBar* progressBar;
 
     QFileIconProvider iconProvider;
 
-    QFileSystemModel *model;
+    void initModel();
+    void initDrivesView();
+    void initTreeView();
+    void initTableView();
+    void initSearchWidgets();
+    void initLayout();
+    void initConnections();
 
 };
 
-#endif // MAINWINDOW_H
+#endif

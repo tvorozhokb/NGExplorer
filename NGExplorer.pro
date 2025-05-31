@@ -12,4 +12,7 @@ HEADERS += mainwindow.h
 
 RESOURCES += resources.qrc
 
-RC_FILE += appicon.rc
+RC_FILE += app_icon.rc
+
+DISTFILES += \
+    app_icon.rc
